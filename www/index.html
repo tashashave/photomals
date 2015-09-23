@@ -116,19 +116,21 @@
                     Catch List
                 </ons-list-item>
 
-                <ons-list-item class="menu-item" ng-click="menu.setMainPage('location.html', {closeMenu: true})">
+                <ons-list-item class="menu-item" ng-click="menu.setMainPage('info.html', {closeMenu: true})">
                     <ons-icon icon="fa-heart"></ons-icon>
-                    Location
+                    Info
                 </ons-list-item>
             </ons-list>
 
             <br>
 
+<!--
             <ons-list class="bottom-menu-list">
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page2.html', {closeMenu: true})">
                     Settings
                     <div class="notification menu-notification">3</div>
                 </ons-list-item>
+-->
 
 <!--
                 <ons-list-item class="bottom-menu-item" ng-click="menu.setMainPage('page1.html', {closeMenu: true})">
@@ -192,7 +194,7 @@
         </ons-page>
     </ons-template>
     
-     <ons-template id="location.html">
+     <ons-template id="info.html">
         <ons-page ng-controller="LocationController">
             <ons-toolbar>
                 <div class="left">
@@ -200,7 +202,7 @@
                         <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
                     </ons-toolbar-button>
                 </div>
-                <div class="center">Location</div>
+                <div class="center">Info</div>
             </ons-toolbar>
 
 
