@@ -172,9 +172,10 @@
                         <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
                     </ons-toolbar-button>
                 </div>
+                
                 <div class="center">Catch List</div>
             </ons-toolbar>
-
+            <h3>Score </h3>
             <ons-list>
                 <ons-list-item modifier="chevron" class="item" ng-repeat="item in items">
                     <ons-row>
@@ -189,13 +190,13 @@
                     </ons-row>
                 </ons-list-item>
             </ons-list>
-    
+            
 
         </ons-page>
     </ons-template>
     
      <ons-template id="info.html">
-        <ons-page ng-controller="LocationController">
+        <ons-page ng-controller="InfoController">
             <ons-toolbar>
                 <div class="left">
                     <ons-toolbar-button ng-click="menu.toggle()">
@@ -204,7 +205,7 @@
                 </div>
                 <div class="center">Info</div>
             </ons-toolbar>
-
+                <p>Photomals will get you started in the world of wildlife viewing. Use the "Capture Animal" button to launch the camera and get a snap of wild animal. You will be scored based on difficulty of capturing animals. View what you have captured in the Catch List page. Try to capture them all!</p>
 
     
 

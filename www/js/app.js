@@ -13,7 +13,7 @@ module.controller('CaptureController', function($scope, $data) {
 //    onAppStart Camera on
   });
     
- module.controller('LocationController', function($scope, $data) {
+ module.controller('InfoController', function($scope, $data) {
 //   City selection pull catch list information from database 
   });
     
