@@ -10,7 +10,8 @@
     <script src="scripts/platformOverrides.js"></script>
     <script src="lib/angular/angular.js"></script>
     <script src="lib/onsen/js/onsenui.js"></script>
-    
+    <script src="http://www.parsecdn.com/js/parse-1.6.2.min.js"></script>
+
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
@@ -96,6 +97,7 @@
     <script src="cordova.js"></script>
     <script src="scripts/index.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/services.js"></script>
     <!-- -->
 
     <ons-sliding-menu menu-page="menu.html" main-page="capture.html" side="left"
@@ -166,6 +168,7 @@
     </ons-template>
 
     <ons-template id="catch.html">
+        <ons-navigator var="mynavigator">
         <ons-page ng-controller="CatchController">
             <ons-toolbar>
                 <div class="left">
@@ -185,7 +188,7 @@
                         </ons-col>
                         <ons-col>
                             <header>
-                                <span class="item-title">{{item.name}}</span>
+                                <span class="item-title">{{item.get('name')}}</span>
                             </header>
                         </ons-col>
                     </ons-row>
@@ -194,6 +197,7 @@
             
 
         </ons-page>
+        </ons-navigator>
     </ons-template>
     
      <ons-template id="info.html">
@@ -217,11 +221,9 @@
         <ons-page ng-controller="DetailController">
             <ons-toolbar>
                 <div class="left">
-<!--
-                    <ons-toolbar-button ng-click="menu.toggle()">
-                        <ons-icon icon="ion-navicon" size="28px" fixed-width="false"></ons-icon>
-                    </ons-toolbar-button>
--->
+
+                    <ons-back-button></ons-back-button>
+
                     
                     <ons-list-item class="detail">
             <ons-row>
@@ -266,6 +268,15 @@
         function onFail(message) {
           alert('Failed because: ' + message);
         }
+        
+        
+        
+        var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+ 
 
     </script>
     

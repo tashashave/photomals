@@ -1,6 +1,6 @@
 (function(){
   'use strict';
-  var module = angular.module('app', ['onsen']);
+  var module = angular.module('app', ['onsen', 'service']);
 
   module.controller('AppController', function($scope, $data) {
 
@@ -17,14 +17,22 @@ module.controller('CaptureController', function($scope, $data) {
 //   City selection pull catch list information from database 
   });
     
- module.controller('CatchController', function($scope, $data) {
+ module.controller('CatchController', function($scope, $data, ParseService) {
      $scope.items = $data.items;
      
         $scope.showDetail = function(index) {
+            console.log('hello');
           var item = $scope.items[index];
           $data.selectedItem = item;
-          $scope.navigator.pushPage('detail.html');
+          $scope.mynavigator.pushPage('detail.html');
         };
+     
+     ParseService.getAnimals(function(results) {
+          $scope.$apply(function() {
+            $scope.items = results;
+              console.log(results);
+          });
+        });
      
 //  display icons
      //change icon to color version when captured
