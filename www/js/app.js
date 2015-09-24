@@ -19,11 +19,23 @@ module.controller('CaptureController', function($scope, $data) {
     
  module.controller('CatchController', function($scope, $data) {
      $scope.items = $data.items;
+     
+        $scope.showDetail = function(index) {
+          var item = $scope.items[index];
+          $data.selectedItem = item;
+          $scope.navigator.pushPage('detail.html');
+        };
+     
 //  display icons
      //change icon to color version when captured
      //score display
         //add capture complete icons
   });
+    
+    module.controller('DetailController', function($scope, $data) {
+        $scope.item = $data.selectedItem;
+          
+      });
 
 
 
