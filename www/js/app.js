@@ -18,7 +18,7 @@ module.controller('CaptureController', function($scope, $data) {
   });
     
  module.controller('CatchController', function($scope, $data, ParseService) {
-     $scope.items = $data.items;
+//     $scope.items = $data.items;
      
         $scope.showDetail = function(index) {
             console.log('hello');

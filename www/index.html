@@ -15,7 +15,7 @@
 
     <!-- CSS dependencies -->
     <link rel="stylesheet" href="lib/onsen/css/onsenui.css" />
-    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-blue-basic-theme.css" />
+    <link rel="stylesheet" href="lib/onsen/css/onsen-css-components-purple-theme.css" />
     <link rel="stylesheet" href="css/style.css" />
 
     <!-- CSP support mode (required for Windows Universal apps) -->
@@ -188,7 +188,8 @@
                         </ons-col>
                         <ons-col>
                             <header>
-                                <span class="item-title">{{item.get('name')}}</span>
+                                <span class="item-title">       {{item.get('name')}}</span>
+                           
                             </header>
                         </ons-col>
                     </ons-row>
@@ -234,8 +235,9 @@
             <ons-row>
                 <ons-col class="detail-col">
                   <div class="detail-photo">
-                    <img ng-src="{{ item.get('pic').pic() }}">
+                    <img ng-src="{{ item.get('thumbnail').url() }}">
                   </div>
+                    <p class="item-points">{{ item.get('points') }}</p>
                 </ons-col>
             </ons-row>
         </ons-list-item>
