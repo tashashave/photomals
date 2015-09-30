@@ -210,8 +210,13 @@
                 </div>
                 <div class="center">Info</div>
             </ons-toolbar>
-                <p>Photomals will get you started in the world of wildlife viewing. Use the "Capture Animal" button to launch the camera and get a snap of wild animal. You will be scored based on difficulty of capturing animals. View what you have captured in the Catch List page. Try to capture them all!</p>
-
+                <p>Photomals will get you started in the world of wildlife viewing. </p>
+            <ol>
+                <li>Use the "Capture Animal" button to launch the camera and get a snap of wild animal.</li>
+                <li>You will be scored based on difficulty of capturing animals.</li>
+                <li>View what you have captured in the Catch List page.</li>
+                <li>Try to capture them all!</li>
+</ol>
     
 
         </ons-page>
@@ -229,7 +234,7 @@
             <ons-row>
                 <ons-col class="detail-col">
                   <div class="detail-photo">
-                    <img ng-src="{{ item.get('photo').url() }}">
+                    <img ng-src="{{ item.get('pic').pic() }}">
                   </div>
                 </ons-col>
             </ons-row>
