@@ -1,3 +1,9 @@
 p {margin: 15px;}
 
 .page__content {background-color: deepskyblue;}
+
+img {max-width: 200px;
+max-height: 100%;
+margin:0 auto;}
+
+.item-points {margin:0 auto;}
